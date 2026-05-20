@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mês da Diversidade - Orgulho Bi</title>
+    <style>
+        :root {
+            --bi-rosa: #D60270;
+            --bi-roxo: #9B4F96;
+            --bi-azul: #0038A8;
+            --bg-white: #ffffff;
+            --text-dark: #1a1a1a;
+            --gradiente-bi: linear-gradient(90deg, var(--bi-rosa), var(--bi-roxo), var(--bi-azul));
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-white);
+            color: var(--text-dark);
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: #fff;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        section, main, div[id] {
+            scroll-margin-top: 80px; 
+        }
+
+        .logo {
+            font-weight: 900;
+            font-size: 1.2rem;
+            background: var(--gradiente-bi);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .menu-links { display: flex; gap: 20px; }
+        .menu-links a { text-decoration: none; color: var(--text-dark); font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
+        .menu-links a:hover { color: var(--bi-rosa); }
+
+        header { text-align: center; padding: 40px 15px; }
+        .titulo-gradiente {
+            font-size: clamp(2rem, 8vw, 3.5rem);
+            margin: 0;
+            background: var(--gradiente-bi);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+            display: block;
+        }
+
+        .banner-container { width: 100%; }
+        .banner-container img { width: 100%; height: auto; display: block; }
+
+        .info-content {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(214, 2, 112, 0.05), rgba(0, 56, 168, 0.05));
+            border-left: 8px solid var(--bi-roxo);
+            padding: 30px;
+            border-radius: 0 20px 20px 0;
+        }
+
+        .bandeira-full {
+            width: 100%;
+            margin: 40px 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .bandeira-full img {
+            width: 100%;
+            height: 550px;
+            max-height: 90vh; /* Ajustado para melhor proporção em telas comuns */
+            display: block;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .secao-titulo { 
+            text-align: center; 
+            margin-bottom: 50px; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .desc-personagens {
+            max-width: 600px;
+            margin: 15px auto;
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .faixa-decorativa {
+            width: 450px;
+            height: 5px;
+            background: var(--gradiente-bi);
+            border-radius: 50px;
+            margin: 10px auto;
+        }
+
+        .container-cards { max-width: 1300px; margin: 0 auto; padding: 20px; }
+        
+        .grid-personagens {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .card {
+            background: var(--gradiente-bi);
+            border-radius: 20px;
+            padding: 3px;
+            display: flex;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(155, 79, 150, 0.4);
+        }
+
+        .card-inner { 
+            background: white; 
+            border-radius: 17px; 
+            display: flex; 
+            flex-direction: column; 
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .char-img { width: 100%; height: 230px; object-fit: cover; }
+
+        .card-content { padding: 20px; flex-grow: 1; }
+        .card-content h3 { color: var(--bi-roxo); font-size: 1.35rem; margin-top: 0; margin-bottom: 12px; }
+        .card-content p { font-size: 0.95rem; margin-bottom: 12px; color: #333; text-align: left; }
+
+        footer {
+            background: var(--gradiente-bi);
+            padding: 60px 20px;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .footer-sub { color: #fff; font-weight: 900; font-size: 1.5rem; margin: 0; }
+    </style>
+</head>
+<body>
+
+    <!-- Link do áudio corrigido para arquivo real .mp3 direto -->
+    <audio id="musica-fundo" loop>
+        <source src="https://raw.githubusercontent.com/TiagoS0/musicas-projetos/main/jao-meninos-e-meninas.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+    </audio>
+
+    <nav>
+        <div class="logo">Orgulho de ser você mesmo</div>
+        <div class="menu-links">
+            <a href="#oquee">O QUE É?</a>
+            <a href="#historia">HISTÓRIA</a>
+            <a href="#fatos">FATOS</a>
+            <a href="#curiosidades">CURIOSIDADES</a>
+            <a href="#bandeira">BANDEIRA</a>
+            <a href="#personagens">PERSONAGENS</a>
+        </div>
+    </nav>
+
+    <header>
+        <span class="titulo-gradiente">| Mês da Diversidade | </span>
+        <span class="titulo-gradiente">Orgulho de Ser Você Mesmo</span>
+    </header>
+
+    <div class="banner-container">
+        <img src="https://horizons-cdn.hostinger.com/f5cb18a6-9af5-498d-a6b6-9a11b52a718c/20443def50b1d16f8f40dbe055d8de7b.jpg" alt="Banner Bi">
+    </div>
+
+    <main class="info-content" id="oquee">
+        <div class="highlight-box">
+            <h2>O que é a Bissexualidade?</h2>
+            <p>Bissexualidade (muitas vezes abreviada como bi) é um termo que descreve a atração por mais de um gênero, do mesmo gênero ou de gênero oposto.</p>
+        </div>
+    </main>
+
+    <div class="bandeira-full" id="bandeira">
+        <img src="https://i.pinimg.com/736x/ed/71/62/ed7162d8b8220d4826ba08093ce41c80.jpg" alt="Bandeira Bissexual">
+    </div>
+
+    <!-- Seções falsas adicionadas para o menu âncora funcionar visualmente -->
+    <div id="historia" style="height: 10px;"></div>
+    <div id="fatos" style="height: 10px;"></div>
+    <div id="curiosidades" style="height: 10px;"></div>
+
+    <div class="container-cards" id="personagens">
+        <div class="secao-titulo">
+            <h2>Personagens Bissexuais Mais Famosos</h2>
+            <div class="faixa-decorativa"></div>
+            <p class="desc-personagens">
+                Confira alguns dos personagens mais famosos da cultura pop que representam a bissexualidade 
+                com autenticidade e força em suas histórias
+            </p>
+        </div>
+
+        <div class="grid-personagens">
+            <!-- LOKI -->
+            <div class="card"><div class="card-inner">
+                <img src="https://www.planocritico.com/wp-content/uploads/2023/11/loki_temporada_2_ranking_episodios_plano_critico.jpg" class="char-img">
+                <div class="card-content">
+                    <h3>Loki (MCU)</h3>
+                    <p>A confirmation ocorreu no terceiro episódio da primeira temporada da série própria do personagem no Disney+. Ao ser questionado por Sylvie sobre possíveis interesses amorosos “E você? É um príncipe. Deve haver uma candidata a princesa ou, talvez, outro príncipe”. Ele então responde: “Um pouco dos dois. Suspeito que igual a você”.</p>
+                    <p>Essa cena de representação LGBTQ+ nas telas marcou um grande momento para o MCU ao apresentar a bissexualidade de um de seus personagens mais famosos. Em suas redes sociais, a diretora Kate Herron afirmou que essa revelação era algo que a série sempre planejou mostrar.</p>
+                </div>
+            </div></div>
+
+            <!-- GATA NEGRA -->
+            <div class="card"><div class="card-inner">
+                <img src="https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:600/h:527/q:75/https://bleedingcool.com/wp-content/uploads/2021/06/Black-Cat-1-1.jpg" class="char-img">
+                <div class="card-content">
+                    <h3>Felicia Hardy</h3>
+                    <p>A anti-heroína mais querida do universo do Miranha deixou claro seu interesse por mulheres no quadrinho Homem-Aranha e Gata Negra: O Mal no Coração dos Homens, quando diz: “Faz tempo que não tenho um namorado… ou namorada, tanto faz…”.</p>
+                    <p>Considerando que ela já mentiu sobre ter um filho com o teioso no universo da Sony para PlayStation, fica a dúvida se os roteiristas não revelaram, futuramente, que a tal namorada em Paris foi apenas uma invenção para ela escapar de Nova York, já que estava sendo caçada. De qualquer forma, até prova em contrário, sua bissexualidade é canônica também nesse universo.</p>
+                </div>
+            </div></div>
+
+            <!-- ARLEQUINA -->
+            <div class="card"><div class="card-inner">
+                <img src="https://preview.redd.it/artwork-harley-and-ivy-road-trip-art-by-me-v0-qvgix6rvxbf91.jpg?width=1080&crop=smart&auto=webp&s=450e9a7b68220ecaeb6753481f09665c446b99fd" class="char-img">
+                <div class="card-content">
+                    <h3>Arlequina</h3>
+                    <p>Em 2015, a conta oficial da DC no Twitter confirmou o relacionamento entre Arlequina e Hera Venenosa, consolidando-as como um dos casais LGBTQIAP+ mais famosos da editora. Essa relação é amplamente explorada em diversos universos, com destaque para a série animada Harley Quinn (2019) que, por ser voltada ao público adulto, exige cautela com os pequenos, mas segue como recomendação essencial aos fãs.</p>
+                    <p>Além da animação, essa dinâmica foi abordada em jogos da franquia Batman: Arkham e Injustice, bem como no cinema, no filme Aves de Rapina (2020).</p>
+                </div>
+            </div></div>
+
+            <!-- SARA LANCE -->
+            <div class="card"><div class="card-inner">
+                <img src="" class="char-img">
+                <div class="card-content">
+                    <h3>Sara Lance</h3>
+                    <p>Legends of Tomorrow é sem dúvida, a série mais descompromissada e divertida do Arrowverse. Um dos grandes exemplos disso é Sara Lance. Ela liderou a equipe até a série ser encerrada em sua sétima temporada, vivendo um romance com Ava Sharpe — ex-diretora do Departamento Temporal e atual membro das Lendas até o desfecho da série — desde o episódio doze da terceira temporada.</p>
+                </div>
+            </div></div>
+
+            <!-- TIM DRAKE -->
+            <div class="card"><div class="card-inner">
+                <img src="https://s2-g1.glbimg.com/3KRMRosWxslHiXroGA20to36Rc8=/0x0:681x383/600x0/smart/filters:gifv():strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2021/r/N/ZCKHs5S5KGAMS2TKJE9Q/batman-urban-legends-robin-tim-drake.jpg" class="char-img">
+                <div class="card-content">
+                    <h3>Tim Drake</h3>
+                    <p>A terceira pessoa a assumir a identidade de Robin nos quadrinhos da DC, assumiu ser bissexual na edição da série "Batman: Urban Legends" publicada 2021.</p>
+                    <p>"Para ser bem clara, os sentimentos dele por Stephanie Brown são/foram 100% reais, assim como seus sentimentos por Bernard. No entanto, Tim ainda está se descobrindo.", afirmou a roteirista da série, Meghan Fitzmartin, em entrevista ao site Polygon.</p>
+                </div>
+            </div></div>
+
+            <!-- SUPERGIRL -->
+            <div class="card"><div class="card-inner">
+                <img src="https://i.kickstarter.com/assets/046/157/929/9218f5b2ea3436fe81b0547fa96c04a7_original.jpeg?fit=scale-down&origin=ugc&q=92&v=1724226170&width=680&sig=lBsYCNG5oXdr4Fs2cuy9YEoB1CgHoyOMAS4suN7LiEs%3D" class="char-img">
+                <div class="card-content">
+                    <h3>Supergirl</h3>
+                    <p>Fãs da série alegam que a CW cortou um beijo lésbico do último episódio do show, baseando-se em um suposto roteiro e imagens que vazaram. Embora o roteiro pareça claramente falso, as imagens do beijo entre as personagens são bastante convincentes.</p>
+                    <p>Embora "Supercorp" não tenha se tornado cânone na série, ele permanece como um dos shipps mais famosos do Arrowverse. Visando trazer mais conteúdo para os fãs do casal (Supergirl e Lena Luthor), a escritora brasileira Sarah Amorim e a ilustradora mexicana Ana Patricia Ramos lançaram a HQ independente "Pink Kryptonite".</p>
+                </div>
+            </div></div>
+
+            <!-- KORRA -->
+            <div class="card"><div class="card-inner">
+                <img src="https://kanto.legiaodosherois.com.br/w760-h398-gnw-cfill-q95/wp-content/uploads/2019/06/legiao_FN7sSPuOiKMC905Df4zZnr8Q1LHURVwmbp_kEIWecX.jpg.webp" class="char-img">
+                <div class="card-content">
+                    <h3>Kora</h3>
+                    <p>A confirmação veio através da história em quadrinhos: <strong>The Legend of Korra: Ruins of the Empire : Parte Um.</strong></p>
+                    <p>Ao final da animação de Lenda de Korra, vimos Korra e Asami de mãos dadas adentrando o Mundo dos Espíritos. Mais tarde, os criadores da série admitiram que o desfecho deveria mostrar como Korra e Asami estavam em um relacionamento romântico, continuando suas jornadas juntas.</p>
+                </div>
+            </div></div>
+
+            <!-- LUZ NOCEDA -->
+            <div class="card"><div class="card-inner">
+                <img src="https://static.wikia.nocookie.net/the-owl-house/images/1/19/Follies_at_the_Coven_Day_Parade_-_109.png/revision/latest/scale-to-width-down/985?cb=20220331084931" class="char-img">
+                <div class="card-content">
+                    <h3>Luz Noceda</h3>
+                    <p>The Owl House teve sua terceira temporada reduzida a três especiais, pois os executivos da Disney Television Animation consideraram que a série não se encaixava na "marca Disney". Um dos motivos para essa decisão poderia ser a forte presença de personagens LGBTQ+.</p>
+                    <p>Mas a série terá uma continuação em graphic novel intitulada: <strong>The Long-Lived King</strong>, situada dois anos após o final da série.</p>
+                </div>
+            </div></div>
+
+            <!-- CHARLIE -->
+            <div class="card"><div class="card-inner">
+                <img src="https://static.wikia.nocookie.net/hazbinhotel/images/9/94/HHs2e6_-_Vaggie_comforts_Charlie.png/revision/latest/scale-to-width-down/985?cb=20251113102221" class="char-img">
+                <div class="card-content">
+                    <h3>Charlie Morningstar</h3>
+                    <p>A protagonista da série adulta Hazbin Hotel (Prime Video), possui um passado romântico antes de seu atual relacionamento com Vaggie. Durante seus anos escolares no Inferno, Charlie namorou Seviathan von Eldritch. Ele é inclusive retratado levando-a ao baile de formatura em uma das ilustrações oficiais de Vivziepop.</p>
+                </div>
+            </div></div>
+        </div>
+    </div>
+
+    <footer>
+        <p class="footer-sub">Orgulho de ser você mesmo &copy; 2026</p>
+    </footer>
+
+    <script>
+        const audio = document.getElementById("musica-fundo");
+        audio.volume = 0.3; // Volume agradável de fundo
+
+        // Recupera a posição do áudio se já existir um registro no navegador
+        const storedTime = localStorage.getItem("audioTime");
+        if (storedTime !== null) {
+            audio.currentTime = parseFloat(storedTime);
+        }
+
+        // Salva continuamente o progresso do tempo da música
+        audio.addEventListener('timeupdate', () => {
+            localStorage.setItem("audioTime", audio.currentTime);
+        });
+
+        // Função principal de ativação automática
+        function tocarMusicaAutomatica() {
+            if (audio.paused) {
+                audio.play().then(() => {
+                    desativarGatilhos();
+                }).catch(err => {
+                    console.log("Aguardando mínima movimentação na tela para ativar áudio.");
+                });
+            }
+        }
+
+        // Adiciona ouvintes para capturar o primeiro micro-movimento ou toque do usuário
+        function ativarGatilhos() {
+            window.addEventListener('scroll', tocarMusicaAutomatica, { passive: true });
+            window.addEventListener('mousemove', tocarMusicaAutomatica, { passive: true });
+            window.addEventListener('touchstart', tocarMusicaAutomatica, { passive: true });
+            window.addEventListener('click', tocarMusicaAutomatica, { passive: true });
+            window.addEventListener('keydown', tocarMusicaAutomatica, { passive: true });
+        }
+
+        function desativarGatilhos() {
+            window.removeEventListener('scroll', tocarMusicaAutomatica);
+            window.removeEventListener('mousemove', tocarMusicaAutomatica);
+            window.removeEventListener('touchstart', tocarMusicaAutomatica);
+            window.removeEventListener('click', tocarMusicaAutomatica);
+            window.removeEventListener('keydown', tocarMusicaAutomatica);
+        }
+
+        // Tenta iniciar no instante zero do carregamento da página
+        window.addEventListener('DOMContentLoaded', () => {
+            let playPromise = audio.play();
+
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    console.log("Autoplay executado com sucesso.");
+                }).catch(error => {
+                    // Se o navegador bloquear, os gatilhos iniciam o som no primeiro movimento
+                    ativarGatilhos();
+                });
+            }
+        });
+    </script>
+</body>
+</html>
