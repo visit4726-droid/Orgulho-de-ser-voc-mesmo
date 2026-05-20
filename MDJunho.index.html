@@ -14,18 +14,25 @@
             --gradiente-bi: linear-gradient(90deg, var(--bi-rosa), var(--bi-roxo), var(--bi-azul));
         }
 
+
         html {
             scroll-behavior: smooth;
         }
 
-        body {
-            background-color: var(--bg-white);
-            color: var(--text-dark);
-            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
+
+      body {
+    background: linear-gradient(135deg, #FFE4E1 0%, #FFF0F5 12%, #E1BEE7 25%, #F3E5F5 37%, #C5CAE9 50%, #E8EAF6 62%, #B3E5FC 75%, #E0F2F1 87%, #C8E6C9 100%);
+    background-attachment: fixed;
+    color: var(--text-dark);
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+
+
 
         nav {
             background: #fff;
@@ -39,9 +46,11 @@
             z-index: 1000;
         }
 
+
         section, main, div[id] {
-            scroll-margin-top: 80px; 
+            scroll-margin-top: 80px;
         }
+
 
         .logo {
             font-weight: 900;
@@ -51,9 +60,11 @@
             -webkit-text-fill-color: transparent;
         }
 
+
         .menu-links { display: flex; gap: 20px; }
         .menu-links a { text-decoration: none; color: var(--text-dark); font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
         .menu-links a:hover { color: var(--bi-rosa); }
+
 
         header { text-align: center; padding: 40px 15px; }
         .titulo-gradiente {
@@ -66,14 +77,17 @@
             display: block;
         }
 
+
         .banner-container { width: 100%; }
         .banner-container img { width: 100%; height: auto; display: block; }
+
 
         .info-content {
             max-width: 1000px;
             margin: 50px auto;
             padding: 0 20px;
         }
+
 
         .highlight-box {
             background: linear-gradient(135deg, rgba(214, 2, 112, 0.05), rgba(0, 56, 168, 0.05));
@@ -82,12 +96,14 @@
             border-radius: 0 20px 20px 0;
         }
 
+
         .bandeira-full {
             width: 100%;
             margin: 40px 0;
             padding: 0;
             overflow: hidden;
         }
+
 
         .bandeira-full img {
             width: 100%;
@@ -98,14 +114,15 @@
             object-position: center;
         }
 
-        .secao-titulo { 
-            text-align: center; 
-            margin-bottom: 50px; 
+
+        .secao-titulo {
+            text-align: center;
+            margin-bottom: 50px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        
+       
         .desc-personagens {
             max-width: 600px;
             margin: 15px auto;
@@ -113,6 +130,7 @@
             color: #555;
             line-height: 1.5;
         }
+
 
         .faixa-decorativa {
             width: 450px;
@@ -122,14 +140,16 @@
             margin: 10px auto;
         }
 
+
         .container-cards { max-width: 1300px; margin: 0 auto; padding: 20px; }
-        
+       
         .grid-personagens {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 30px;
             justify-content: center;
         }
+
 
         .card {
             background: var(--gradiente-bi);
@@ -139,25 +159,30 @@
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
+
         .card:hover {
             transform: translateY(-15px);
             box-shadow: 0 20px 40px rgba(155, 79, 150, 0.4);
         }
 
-        .card-inner { 
-            background: white; 
-            border-radius: 17px; 
-            display: flex; 
-            flex-direction: column; 
+
+        .card-inner {
+            background: white;
+            border-radius: 17px;
+            display: flex;
+            flex-direction: column;
             width: 100%;
             overflow: hidden;
         }
 
+
         .char-img { width: 100%; height: 230px; object-fit: cover; }
+
 
         .card-content { padding: 20px; flex-grow: 1; }
         .card-content h3 { color: var(--bi-roxo); font-size: 1.35rem; margin-top: 0; margin-bottom: 12px; }
         .card-content p { font-size: 0.95rem; margin-bottom: 12px; color: #333; text-align: left; }
+
 
         footer {
             background: var(--gradiente-bi);
@@ -166,16 +191,19 @@
             margin-top: 80px;
         }
 
+
         .footer-sub { color: #fff; font-weight: 900; font-size: 1.5rem; margin: 0; }
     </style>
 </head>
 <body>
+
 
     <!-- Link do áudio corrigido para arquivo real .mp3 direto -->
     <audio id="musica-fundo" loop>
         <source src="https://raw.githubusercontent.com/TiagoS0/musicas-projetos/main/jao-meninos-e-meninas.mp3" type="audio/mpeg">
         Seu navegador não suporta áudio.
     </audio>
+
 
     <nav>
         <div class="logo">Orgulho de ser você mesmo</div>
@@ -189,14 +217,17 @@
         </div>
     </nav>
 
+
     <header>
         <span class="titulo-gradiente">| Mês da Diversidade | </span>
         <span class="titulo-gradiente">Orgulho de Ser Você Mesmo</span>
     </header>
 
+
     <div class="banner-container">
         <img src="https://horizons-cdn.hostinger.com/f5cb18a6-9af5-498d-a6b6-9a11b52a718c/20443def50b1d16f8f40dbe055d8de7b.jpg" alt="Banner Bi">
     </div>
+
 
     <main class="info-content" id="oquee">
         <div class="highlight-box">
@@ -205,24 +236,28 @@
         </div>
     </main>
 
+
     <div class="bandeira-full" id="bandeira">
         <img src="https://i.pinimg.com/736x/ed/71/62/ed7162d8b8220d4826ba08093ce41c80.jpg" alt="Bandeira Bissexual">
     </div>
+
 
     <!-- Seções falsas adicionadas para o menu âncora funcionar visualmente -->
     <div id="historia" style="height: 10px;"></div>
     <div id="fatos" style="height: 10px;"></div>
     <div id="curiosidades" style="height: 10px;"></div>
 
+
     <div class="container-cards" id="personagens">
         <div class="secao-titulo">
             <h2>Personagens Bissexuais Mais Famosos</h2>
             <div class="faixa-decorativa"></div>
             <p class="desc-personagens">
-                Confira alguns dos personagens mais famosos da cultura pop que representam a bissexualidade 
+                Confira alguns dos personagens mais famosos da cultura pop que representam a bissexualidade
                 com autenticidade e força em suas histórias
             </p>
         </div>
+
 
         <div class="grid-personagens">
             <!-- LOKI -->
@@ -235,6 +270,7 @@
                 </div>
             </div></div>
 
+
             <!-- GATA NEGRA -->
             <div class="card"><div class="card-inner">
                 <img src="https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:600/h:527/q:75/https://bleedingcool.com/wp-content/uploads/2021/06/Black-Cat-1-1.jpg" class="char-img">
@@ -244,6 +280,7 @@
                     <p>Considerando que ela já mentiu sobre ter um filho com o teioso no universo da Sony para PlayStation, fica a dúvida se os roteiristas não revelaram, futuramente, que a tal namorada em Paris foi apenas uma invenção para ela escapar de Nova York, já que estava sendo caçada. De qualquer forma, até prova em contrário, sua bissexualidade é canônica também nesse universo.</p>
                 </div>
             </div></div>
+
 
             <!-- ARLEQUINA -->
             <div class="card"><div class="card-inner">
@@ -255,14 +292,16 @@
                 </div>
             </div></div>
 
+
             <!-- SARA LANCE -->
             <div class="card"><div class="card-inner">
-                <img src="" class="char-img">
+                <img src="Avalance.jpeg" class="char-img">
                 <div class="card-content">
                     <h3>Sara Lance</h3>
                     <p>Legends of Tomorrow é sem dúvida, a série mais descompromissada e divertida do Arrowverse. Um dos grandes exemplos disso é Sara Lance. Ela liderou a equipe até a série ser encerrada em sua sétima temporada, vivendo um romance com Ava Sharpe — ex-diretora do Departamento Temporal e atual membro das Lendas até o desfecho da série — desde o episódio doze da terceira temporada.</p>
                 </div>
             </div></div>
+
 
             <!-- TIM DRAKE -->
             <div class="card"><div class="card-inner">
@@ -274,6 +313,7 @@
                 </div>
             </div></div>
 
+
             <!-- SUPERGIRL -->
             <div class="card"><div class="card-inner">
                 <img src="https://i.kickstarter.com/assets/046/157/929/9218f5b2ea3436fe81b0547fa96c04a7_original.jpeg?fit=scale-down&origin=ugc&q=92&v=1724226170&width=680&sig=lBsYCNG5oXdr4Fs2cuy9YEoB1CgHoyOMAS4suN7LiEs%3D" class="char-img">
@@ -283,6 +323,7 @@
                     <p>Embora "Supercorp" não tenha se tornado cânone na série, ele permanece como um dos shipps mais famosos do Arrowverse. Visando trazer mais conteúdo para os fãs do casal (Supergirl e Lena Luthor), a escritora brasileira Sarah Amorim e a ilustradora mexicana Ana Patricia Ramos lançaram a HQ independente "Pink Kryptonite".</p>
                 </div>
             </div></div>
+
 
             <!-- KORRA -->
             <div class="card"><div class="card-inner">
@@ -294,6 +335,7 @@
                 </div>
             </div></div>
 
+
             <!-- LUZ NOCEDA -->
             <div class="card"><div class="card-inner">
                 <img src="https://static.wikia.nocookie.net/the-owl-house/images/1/19/Follies_at_the_Coven_Day_Parade_-_109.png/revision/latest/scale-to-width-down/985?cb=20220331084931" class="char-img">
@@ -303,6 +345,7 @@
                     <p>Mas a série terá uma continuação em graphic novel intitulada: <strong>The Long-Lived King</strong>, situada dois anos após o final da série.</p>
                 </div>
             </div></div>
+
 
             <!-- CHARLIE -->
             <div class="card"><div class="card-inner">
@@ -315,13 +358,16 @@
         </div>
     </div>
 
+
     <footer>
         <p class="footer-sub">Orgulho de ser você mesmo &copy; 2026</p>
     </footer>
 
+
     <script>
         const audio = document.getElementById("musica-fundo");
         audio.volume = 0.3; // Volume agradável de fundo
+
 
         // Recupera a posição do áudio se já existir um registro no navegador
         const storedTime = localStorage.getItem("audioTime");
@@ -329,10 +375,12 @@
             audio.currentTime = parseFloat(storedTime);
         }
 
+
         // Salva continuamente o progresso do tempo da música
         audio.addEventListener('timeupdate', () => {
             localStorage.setItem("audioTime", audio.currentTime);
         });
+
 
         // Função principal de ativação automática
         function tocarMusicaAutomatica() {
@@ -345,6 +393,7 @@
             }
         }
 
+
         // Adiciona ouvintes para capturar o primeiro micro-movimento ou toque do usuário
         function ativarGatilhos() {
             window.addEventListener('scroll', tocarMusicaAutomatica, { passive: true });
@@ -354,6 +403,7 @@
             window.addEventListener('keydown', tocarMusicaAutomatica, { passive: true });
         }
 
+
         function desativarGatilhos() {
             window.removeEventListener('scroll', tocarMusicaAutomatica);
             window.removeEventListener('mousemove', tocarMusicaAutomatica);
@@ -362,9 +412,11 @@
             window.removeEventListener('keydown', tocarMusicaAutomatica);
         }
 
+
         // Tenta iniciar no instante zero do carregamento da página
         window.addEventListener('DOMContentLoaded', () => {
             let playPromise = audio.play();
+
 
             if (playPromise !== undefined) {
                 playPromise.then(() => {
@@ -378,3 +430,5 @@
     </script>
 </body>
 </html>
+
+
