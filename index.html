@@ -10,7 +10,7 @@
             --bi-roxo: #9B4F96;
             --bi-azul: #0038A8;
             --bg-white: #ffffff;
-            --text-dark: #1a1a1a;
+            --text-dark: #000000;
             --gradiente-bi: linear-gradient(90deg, var(--bi-rosa), var(--bi-roxo), var(--bi-azul));
         }
 
@@ -18,18 +18,17 @@
             scroll-behavior: smooth;
         }
 
-      body {
-    background: linear-gradient(135deg, #FFE4E1 0%, #FFF0F5 12%, #E1BEE7 25%, #F3E5F5 37%, #C5CAE9 50%, #E8EAF6 62%, #B3E5FC 75%, #E0F2F1 87%, #C8E6C9 100%);
-    background-attachment: fixed;
-    color: var(--text-dark);
-    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    min-height: 100vh;
-}
-
-
+        body {
+            background: linear-gradient(135deg, #FFE4E1 0%, #FFF0F5 12%, #E1BEE7 25%, #F3E5F5 37%, #C5CAE9 50%, #E8EAF6 62%, #B3E5FC 75%, #E0F2F1 87%, #C8E6C9 100%);
+            background-attachment: fixed;
+            color: var(--text-dark);
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+       
         nav {
             background: #fff;
             padding: 15px 20px;
@@ -43,7 +42,7 @@
         }
 
         section, main, div[id] {
-            scroll-margin-top: 80px; 
+            scroll-margin-top: 80px;
         }
 
         .logo {
@@ -74,41 +73,43 @@
 
         .info-content {
             max-width: 1000px;
-            margin: 50px auto;
+            margin: 20px auto;
             padding: 0 20px;
         }
 
-        .highlight-box {
-            background: linear-gradient(135deg, rgba(214, 2, 112, 0.05), rgba(0, 56, 168, 0.05));
-            border-left: 8px solid var(--bi-roxo);
-            padding: 30px;
-            border-radius: 0 20px 20px 0;
-        }
-
-        .bandeira-full {
-            width: 100%;
-            margin: 40px 0;
-            padding: 0;
+        .bandeira-full-width {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            margin-top: 20px;
+            margin-bottom: 20px;
             overflow: hidden;
         }
 
-        .bandeira-full img {
+        .bandeira-full-width img {
             width: 100%;
-            height: 550px;
-            max-height: 90vh; /* Ajustado para melhor proporção em telas comuns */
+            height: auto;
+            max-height: 60vh;
             display: block;
-            object-fit: cover;
-            object-position: center;
+            object-fit: contain;
         }
 
-        .secao-titulo { 
-            text-align: center; 
-            margin-bottom: 50px; 
+        .secao-titulo {
+            margin-bottom: 25px;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            font-size: 24px;
+            text-align: center;
         }
-        
+
+        .secao-titulo h2 {
+            color: #000000;
+            margin-bottom: 10px;
+        }
+       
         .desc-personagens {
             max-width: 600px;
             margin: 15px auto;
@@ -118,7 +119,7 @@
         }
 
         .faixa-decorativa {
-            width: 450px;
+            width: 650px;
             height: 5px;
             background: var(--gradiente-bi);
             border-radius: 50px;
@@ -126,7 +127,7 @@
         }
 
         .container-cards { max-width: 1300px; margin: 0 auto; padding: 20px; }
-        
+       
         .grid-personagens {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -147,69 +148,71 @@
             box-shadow: 0 20px 40px rgba(155, 79, 150, 0.4);
         }
 
-        .card-inner { 
-            background: white; 
-            border-radius: 17px; 
-            display: flex; 
-            flex-direction: column; 
+        .card-inner {
+            background: white;
+            border-radius: 17px;
+            display: flex;
+            flex-direction: column;
             width: 100%;
             overflow: hidden;
         }
 
-       .char-img { width: 100%; height: 280px; object-fit: contain; background-color: #f5f5f5; }
+        .char-img { 
+            width: 100%; 
+            height: 320px; 
+            object-fit: cover; 
+            display: block;
+        }
 
         .card-content { padding: 20px; flex-grow: 1; }
-        .card-content h3 { color: var(--bi-roxo); font-size: 1.35rem; margin-top: 0; margin-bottom: 12px; }
+       
+        .card-content h3 { color: #000000; font-size: 1.35rem; margin-top: 0; margin-bottom: 12px; text-align: left; }
+
         .card-content p { font-size: 0.95rem; margin-bottom: 12px; color: #333; text-align: left; }
 
         footer {
             background: var(--gradiente-bi);
             padding: 60px 20px;
             text-align: center;
-            margin-top: 80px;
+            margin-top: 60px;
         }
 
         .footer-sub { color: #fff; font-weight: 900; font-size: 1.5rem; margin: 0; }
 
         .info-content ul {
-    list-style-position: inside;
-    padding-left: 0;
-}
+            list-style-position: inside;
+            padding-left: 0;
+        }
 
-.info-content ul li {
-    margin-bottom: 15px;
-}
+        .info-content ul li {
+            margin-bottom: 15px;
+        }
 
-.info-content h2 {
-    color: var(--bi-roxo);
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-}
+        .info-content h2 {
+            color: #000000;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
 
-.info-content p {
-    font-size: 1.05rem;
-    line-height: 1.8;
-    color: #333;
-}
+        .info-content p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #333;
+        }
 
+        .texto-centralizado {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Link do áudio corrigido para arquivo real .mp3 direto -->
-    <audio id="musica-fundo" loop>
-        <source src="https://raw.githubusercontent.com/TiagoS0/musicas-projetos/main/jao-meninos-e-meninas.mp3" type="audio/mpeg">
-        Seu navegador não suporta áudio.
-    </audio>
-
     <nav>
-        <div class="logo">Orgulho de ser você mesmo</div>
+        <div class="logo">Orgulho De Ser Você Mesmo</div>
         <div class="menu-links">
             <a href="#oquee">O QUE É?</a>
-            <a href="#historia">HISTÓRIA</a>
-            <a href="#fatos">FATOS</a>
-            <a href="#curiosidades">CURIOSIDADES</a>
-            <a href="#bandeira">BANDEIRA</a>
+            <a href="#dificuldades">DIFICULDADES</a>
+            <a href="#movimentos">MOVIMENTOS</a>
             <a href="#personagens">PERSONAGENS</a>
         </div>
     </nav>
@@ -220,66 +223,81 @@
     </header>
 
     <div class="banner-container">
-        <img src="ChatGPT Image 20 de mai. de 2026, 16_28_19.png" alt="Banner Bi">
+        <img src="file:///C:/Users/Marcelo%20Macedo/Downloads/Design%20sem%20nome%20(1)%20(1).png" alt="Banner Bi">
     </div>
 
+    <!-- SEÇÃO O QUE É -->
     <main class="info-content" id="oquee">
-        <div class="highlight-box">
-            <h2>O que é a Bissexualidade?</h2>
-            <p>Bissexualidade (muitas vezes abreviada como bi) é um termo que descreve a atração por mais de um gênero, do mesmo gênero ou de gênero oposto.</p>
+        <div class="secao-titulo">
+            <h2> O que é ser Bissexual?</h2>
+            <p> São pessoas que sentem atração afetiva, romântica ou sexual por mais de um gênero, 
+                podendo ser do gênero oposto, do mesmo gênero ou não-binário. Isso não significa
+                que a atração seja dividida em partes iguais ou que funcione da mesma forma para
+                 todo mundo. Como definiu a ativista Robyn Ochs, é a possibilidade de se conectar
+                  com mais de um gênero — não necessariamente ao mesmo tempo, do mesmo jeito ou na 
+                  mesma intensidade.
+
+            </p>
         </div>
     </main>
 
-    <div class="bandeira-full" id="bandeira">
-        <img src="https://i.pinimg.com/736x/ed/71/62/ed7162d8b8220d4826ba08093ce41c80.jpg" alt="Bandeira Bissexual">
-    </div>
-
-        <!-- SEÇÃO HISTÓRIA -->
-    <main class="info-content" id="historia">
-        <div class="highlight-box">
-            <h2>📚 História da Bissexualidade</h2>
-            <p>A bissexualidade não é um conceito moderno. Ao longo da história, muitas culturas reconheceram e aceitaram relacionamentos entre pessoas do mesmo gênero. Na Grécia Antiga, relacionamentos entre homens eram comuns e aceitos socialmente. Na Roma Antiga, imperadores como Adriano e Antínoo tiveram relacionamentos que transcendiam as categorias de gênero.</p>
-            <p>Durante a Idade Média e o Renascimento, muitos artistas e intelectuais tiveram relacionamentos com pessoas de múltiplos gêneros. Michelangelo, Leonardo da Vinci e muitos outros deixaram registros de sua sexualidade fluida.</p>
-            <p>O termo "bissexual" como conhecemos hoje foi popularizado no século XX, especialmente durante o movimento de libertação sexual dos anos 1960 e 1970. O movimento LGBTQ+ moderno reconheceu a bissexualidade como uma identidade válida e importante.</p>
+    <!-- SEÇÃO HISTÓRIA E BANDEIRAS -->
+    <main class="info-content" id="dificuldades">
+        <div class="secao-titulo">
+            <h2>Dificuldades</h2>
+            <p class="texto-centralizado">A bissexualidade não é um conceito moderno, já que se ouve falar sobre o assunto desde as antigas civilizações, em diversos lugares do mundo. No entanto, assim como hoje, as pessoas que assumem bis sofrem muito preconceito tanto fora quanto dentro da própria comunidade LGBTQIA+. Isso ocorre devido a estereótipos que invalidam a orientação, como exemplo de clássicas frases como "é apenas uma fase", "a pessoa está apenas confusa", "ela só está experimentando" ou que "a pessoa é infiel". A busca constante por validação gera a chamada bifobia e a invisibilidade, fazendo com que pessoas bissexuais muitas vezes não se sintam pertencentes a nenhum dos polos tradicionais.</p> 
         </div>
-    </main>
 
-    <!-- SEÇÃO FATOS -->
-    <main class="info-content" id="fatos">
+        <div class="secao-titulo">
+            <h2>Bandeiras</h2>
+        </div>
+      
+        <div class="bandeira-full-width">
+            <img src="https://i.pinimg.com/736x/ed/71/62/ed7162d8b8220d4826ba08093ce41c80.jpg" alt="Bandeira Bissexual">
+        </div>
+
         <div class="highlight-box">
-            <h2>📊 Fatos sobre Bissexualidade</h2>
-            <ul style="font-size: 1.05rem; line-height: 2;">
-                <li><strong>Representação:</strong> Estudos mostram que bissexuais representam uma parcela significativa da população LGBTQ+, muitas vezes sendo a maior parte.</li>
-                <li><strong>Invisibilidade:</strong> Bissexuais frequentemente enfrentam "apagamento bissexual" - a tendência de ignorar ou negar sua existência.</li>
-                <li><strong>Saúde Mental:</strong> Bissexuais enfrentam desafios únicos de saúde mental devido ao estigma de ambos os lados heterossexual e homossexual.</li>
-                <li><strong>Relacionamentos:</strong> Pessoas bissexuais podem ter relacionamentos com qualquer gênero, e isso não diminui sua identidade.</li>
-                <li><strong>Fluidez:</strong> A atração bissexual pode variar ao longo do tempo e não precisa ser 50/50.</li>
-                <li><strong>Bandeira:</strong> A bandeira bissexual foi criada em 1998 por Michael Page e representa a sobreposição de atração por múltiplos gêneros.</li>
+             <p>A bandeira atual foi desenvolvida pelo ativista e designer gráfico norte-americano Michael Page em 5 de dezembro de 1998. Ele sentia que a comunidade bissexual precisava de seu próprio símbolo exclusivo, que fosse tão representativo quanto, a clássica bandeira do arco-íris.</p>
+            <p>A bandeira atual possui três faixas horizontais:</p>
+            <ul>
+                <li><strong>O Rosa:</strong> Atração por pessoas do mesmo gênero.</li>
+                <li><strong>O Azul:</strong> Atração por pessoas de gêneros diferentes.</li>
+                <li><strong>Já o Roxo:</strong> Seria uma fusão das duas.</li>
             </ul>
         </div>
-    </main>
 
-    <!-- SEÇÃO CURIOSIDADES -->
-    <main class="info-content" id="curiosidades">
+        <div class="bandeira-full-width">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Bi_triangles.svg/250px-Bi_triangles.svg.png" alt="Símbolo Triângulos Bi">
+        </div>
+
         <div class="highlight-box">
-            <h2>✨ Curiosidades Interessantes</h2>
-            <p><strong>🎨 Artistas Famosos:</strong> Muitos artistas, músicos e escritores famosos são bissexuais, incluindo David Bowie, Freddie Mercury, Lady Gaga e muitos outros que deixaram legados culturais importantes.</p>
-            <p><strong>🌍 Aceitação Global:</strong> Alguns países têm leis que protegem pessoas bissexuais, enquanto outros ainda criminalizam relacionamentos entre pessoas do mesmo gênero. A luta por direitos continua em todo o mundo.</p>
-            <p><strong>💜 Cores da Bandeira:</strong> A bandeira bissexual tem três cores: rosa (atração pelo mesmo gênero), azul (atração pelo gênero oposto) e roxo (a sobreposição, representando a fluidez).</p>
-            <p><strong>📱 Comunidade Online:</strong> A internet criou espaços seguros para pessoas bissexuais se conectarem, compartilharem experiências e encontrarem comunidade.</p>
-            <p><strong>🎭 Representação na Mídia:</strong> Cada vez mais séries, filmes e livros apresentam personagens bissexuais de forma autêntica e respeitosa.</p>
-            <p><strong>💪 Movimento Social:</strong> O Dia da Visibilidade Bissexual é celebrado em 23 de setembro, promovendo conscientização e aceitação.</p>
+            <p>Antes da bandeira idealizada por Page, a comunidade utilizava outros símbolos. Na década de 1970 ela era composta por um triângulo rosa (representando o mesmo sexo) e um triângulo azul (oposto), que se sobrepunhavam formando uma cor roxa no meio.</p>
+        </div>
+
+        <div class="bandeira-full-width">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Double_crescent_symbol_%28filled%2C_color%29.svg/250px-Double_crescent_symbol_%28filled%2C_color%29.svg.png" alt="Símbolo Duas Luas Bi">
+        </div>
+
+        <div class="highlight-box">
+            <p>Nos anos 90 Liz Nania criou outra representação para a bandeira, que seria de duas luas crescentes que foi divulgada pela BiNet USA. Ele foi pensado para evitar o uso dos triângulos, devido à associação mais a uma das partes mais tristes de nossa história moderna.</p>
         </div>
     </main>
 
+    <!-- SEÇÃO MOVIMENTOS -->
+    <main class="info-content" id="movimentos">
+        <div class="secao-titulo">
+            <h2>Movimentos</h2>
+            <p>O cenário começou a mudar de forma combativa a partir da Rebelião de Stonewall em 1969, quando a ativista bissexual Brenda Howard, conhecida como a "Mãe do Orgulho", liderou a organização da primeira Marcha do Orgulho LGBTQ+. Nos anos seguintes, o movimento se estruturou com a criação do San Francisco Bisexual Center na década de 1970 e com a publicação do histórico Manifesto Bissexual em 1990.</p>
+        </div>
+    </main>
 
+    <!-- SEÇÃO PERSONAGENS FAMOSOS -->
     <div class="container-cards" id="personagens">
         <div class="secao-titulo">
             <h2>Personagens Bissexuais Mais Famosos</h2>
             <div class="faixa-decorativa"></div>
             <p class="desc-personagens">
-                Confira alguns dos personagens mais famosos da cultura pop que representam a bissexualidade 
-                com autenticidade e força em suas histórias
+                Confira alguns dos personagens mais famosos da cultura pop que representam a bissexualidade com autenticidade e força em suas histórias
             </p>
         </div>
 
@@ -289,7 +307,7 @@
                 <img src="https://www.planocritico.com/wp-content/uploads/2023/11/loki_temporada_2_ranking_episodios_plano_critico.jpg" class="char-img">
                 <div class="card-content">
                     <h3>Loki (MCU)</h3>
-                    <p>A confirmation ocorreu no terceiro episódio da primeira temporada da série própria do personagem no Disney+. Ao ser questionado por Sylvie sobre possíveis interesses amorosos “E você? É um príncipe. Deve haver uma candidata a princesa ou, talvez, outro príncipe”. Ele então responde: “Um pouco dos dois. Suspeito que igual a você”.</p>
+                    <p>A confirmação ocorreu no terceiro episódio da primeira temporada da série própria do personagem no Disney+. Ao ser questionado por Sylvie sobre possíveis interesses amorosos “E você? É um príncipe. Deve haver uma candidata a princesa ou, talvez, outro príncipe”. Ele então responde: “Um pouco dos dois. Suspeito que igual a você”.</p>
                     <p>Essa cena de representação LGBTQ+ nas telas marcou um grande momento para o MCU ao apresentar a bissexualidade de um de seus personagens mais famosos. Em suas redes sociais, a diretora Kate Herron afirmou que essa revelação era algo que a série sempre planejou mostrar.</p>
                 </div>
             </div></div>
@@ -314,7 +332,7 @@
                 </div>
             </div></div>
 
-                        <!-- SARA LANCE -->
+            <!-- SARA LANCE -->
             <div class="card"><div class="card-inner">
                 <img src="https://horizons-cdn.hostinger.com/f5cb18a6-9af5-498d-a6b6-9a11b52a718c/a839f8098e3b65c8c375ce26f3400034.jpg" class="char-img">
                 <div class="card-content">
@@ -328,7 +346,7 @@
                 <img src="https://s2-g1.glbimg.com/3KRMRosWxslHiXroGA20to36Rc8=/0x0:681x383/600x0/smart/filters:gifv():strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2021/r/N/ZCKHs5S5KGAMS2TKJE9Q/batman-urban-legends-robin-tim-drake.jpg" class="char-img">
                 <div class="card-content">
                     <h3>Tim Drake</h3>
-                    <p>A terceira pessoa a assumir a identidade de Robin nos quadrinhos da DC, assumiu ser bissexual na edição da série "Batman: Urban Legends" publicada 2021.</p>
+                    <p>A terceira pessoa a assumir a identidade de Robin nos quadrinhos da DC, assumiu ser bissexual na edição da série "Batman: Urban Legends" publicada em 2021.</p>
                     <p>"Para ser bem clara, os sentimentos dele por Stephanie Brown são/foram 100% reais, assim como seus sentimentos por Bernard. No entanto, Tim ainda está se descobrindo.", afirmou a roteirista da série, Meghan Fitzmartin, em entrevista ao site Polygon.</p>
                 </div>
             </div></div>
@@ -347,7 +365,7 @@
             <div class="card"><div class="card-inner">
                 <img src="https://kanto.legiaodosherois.com.br/w760-h398-gnw-cfill-q95/wp-content/uploads/2019/06/legiao_FN7sSPuOiKMC905Df4zZnr8Q1LHURVwmbp_kEIWecX.jpg.webp" class="char-img">
                 <div class="card-content">
-                    <h3>Kora</h3>
+                    <h3>Korra</h3>
                     <p>A confirmação veio através da história em quadrinhos: <strong>The Legend of Korra: Ruins of the Empire : Parte Um.</strong></p>
                     <p>Ao final da animação de Lenda de Korra, vimos Korra e Asami de mãos dadas adentrando o Mundo dos Espíritos. Mais tarde, os criadores da série admitiram que o desfecho deveria mostrar como Korra e Asami estavam em um relacionamento romântico, continuando suas jornadas juntas.</p>
                 </div>
@@ -375,96 +393,8 @@
     </div>
 
     <footer>
-    
-        <p class="footer-sub">Orgulho de ser você mesmo &copy; 2026</p>
-        
-        <div style="margin-top: 40px; padding-top: 30px; border-top: 2px solid rgba(255,255,255,0.3); max-width: 1000px; margin-left: auto; margin-right: auto;">
-            <h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 20px; text-align: center;">Referências Utilizadas</h3>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; color: #fff; font-size: 0.95rem; line-height: 1.8;">
-                <div>
-                    <strong>🌐 Plataformas:</strong>
-                    <ul style="list-style: none; padding: 0; margin: 10px 0 0 0;">
-                        <li>• <a href="https://www.hostinger.com" target="_blank" style="color: #fff; text-decoration: underline;">Hostinger</a></li>
-                        <li>• <a href="https://github.com" target="_blank" style="color: #fff; text-decoration: underline;">GitHub</a></li>
-                        <li>• <a href="https://www.pinterest.com" target="_blank" style="color: #fff; text-decoration: underline;">Pinterest</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <strong>🤖 IA & Assistentes:</strong>
-                    <ul style="list-style: none; padding: 0; margin: 10px 0 0 0;">
-                        <li>• <a href="https://openai.com/chatgpt" target="_blank" style="color: #fff; text-decoration: underline;">ChatGPT</a></li>
-                        <li>• <a href="https://gemini.google.com" target="_blank" style="color: #fff; text-decoration: underline;">Google Gemini</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            
-        </div>
-   
-
-
         <p class="footer-sub">Orgulho de ser você mesmo &copy; 2026</p>
     </footer>
 
-    <script>
-        const audio = document.getElementById("musica-fundo");
-        audio.volume = 0.3; // Volume agradável de fundo
-
-        // Recupera a posição do áudio se já existir um registro no navegador
-        const storedTime = localStorage.getItem("audioTime");
-        if (storedTime !== null) {
-            audio.currentTime = parseFloat(storedTime);
-        }
-
-        // Salva continuamente o progresso do tempo da música
-        audio.addEventListener('timeupdate', () => {
-            localStorage.setItem("audioTime", audio.currentTime);
-        });
-
-        // Função principal de ativação automática
-        function tocarMusicaAutomatica() {
-            if (audio.paused) {
-                audio.play().then(() => {
-                    desativarGatilhos();
-                }).catch(err => {
-                    console.log("Aguardando mínima movimentação na tela para ativar áudio.");
-                });
-            }
-        }
-
-        // Adiciona ouvintes para capturar o primeiro micro-movimento ou toque do usuário
-        function ativarGatilhos() {
-            window.addEventListener('scroll', tocarMusicaAutomatica, { passive: true });
-            window.addEventListener('mousemove', tocarMusicaAutomatica, { passive: true });
-            window.addEventListener('touchstart', tocarMusicaAutomatica, { passive: true });
-            window.addEventListener('click', tocarMusicaAutomatica, { passive: true });
-            window.addEventListener('keydown', tocarMusicaAutomatica, { passive: true });
-        }
-
-        function desativarGatilhos() {
-            window.removeEventListener('scroll', tocarMusicaAutomatica);
-            window.removeEventListener('mousemove', tocarMusicaAutomatica);
-            window.removeEventListener('touchstart', tocarMusicaAutomatica);
-            window.removeEventListener('click', tocarMusicaAutomatica);
-            window.removeEventListener('keydown', tocarMusicaAutomatica);
-        }
-
-        // Tenta iniciar no instante zero do carregamento da página
-        window.addEventListener('DOMContentLoaded', () => {
-            let playPromise = audio.play();
-
-            if (playPromise !== undefined) {
-                playPromise.then(() => {
-                    console.log("Autoplay executado com sucesso.");
-                }).catch(error => {
-                    // Se o navegador bloquear, os gatilhos iniciam o som no primeiro movimento
-                    ativarGatilhos();
-                });
-            }
-        });
-    </script>
 </body>
 </html>
-
