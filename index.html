@@ -74,15 +74,15 @@
   left: 50%;
   right: 50%;
   margin-left: -50vw;
-  margin-right: -50vw; /* Esses truques removem qualquer margem herdada do body */
+  margin-right: -50vw; /* Remove as margens herdadas do body */
   overflow: hidden;
 }
 
 .banner-container img {
   width: 100%;
-  height: auto; /* Faz a altura se ajustar sozinha ao tamanho real da imagem, sumindo com as faixas */
-  max-height: 300px; /* Garante que ela não vai ficar gigante em telas muito grandes */
-  object-fit: cubic-bezier; /* Permite o ajuste natural da proporção */
+  height: auto; /* Ajusta a altura proporcionalmente para não distorcer */
+  max-height: 280px; /* Limita a altura máxima para não ficar gigante */
+  object-fit: contain; /* Garante que a imagem inteira apareça sem nenhuma distorção */
   display: block;
 }
         .info-content {
