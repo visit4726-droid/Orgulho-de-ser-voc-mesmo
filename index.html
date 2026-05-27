@@ -68,22 +68,24 @@
             display: block;
         }
 
-       .banner-container { 
-    width: 100vw; /* Ocupa 100% da largura da tela */
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw; /* Esses truques removem qualquer margem herdada do body */
-    overflow: hidden;
-}
+.banner-container { 
+  width: 100vw; 
+  position: relative; 
+  left: 50%; 
+  right: 50%; 
+  margin-left: -50vw; 
+  margin-right: -50vw; 
+  overflow: hidden; 
+} 
 
 .banner-container img { 
-    width: 100%; 
-    height: 350px; /* Altere esse valor (ex: 250px, 300px, 400px) para ajustar a altura do banner */
-    object-fit: cover; /* Faz a imagem se adaptar sem esticar ou distorcer */
-    display: block; 
+  width: 100%; 
+  height: auto; 
+  max-height: 300px; /* Ajuste esse valor para controlar o tamanho máximo */
+  object-fit: contain; /* Garante que toda a imagem apareça sem cortes */
+  display: block; 
 }
+
         .info-content {
             max-width: 1000px;
             margin: 20px auto;
