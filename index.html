@@ -76,13 +76,13 @@
   margin-left: -50vw;
   margin-right: -50vw; /* Esses truques removem qualquer margem herdada do body */
   overflow: hidden;
-  background-color: #0f0f12; /* Fundo escuro/neon caso a imagem mude de proporção (ajuste a cor se preferir) */
 }
 
 .banner-container img {
   width: 100%;
-  height: 280px; /* Reduzi um pouco para não ficar muito grande (ajuste entre 250px e 300px como quiser) */
-  object-fit: contain; /* CRUCIAL: Mostra a imagem INTEIRA sem cortes e sem distorcer */
+  height: auto; /* Faz a altura se ajustar sozinha ao tamanho real da imagem, sumindo com as faixas */
+  max-height: 300px; /* Garante que ela não vai ficar gigante em telas muito grandes */
+  object-fit: cubic-bezier; /* Permite o ajuste natural da proporção */
   display: block;
 }
         .info-content {
