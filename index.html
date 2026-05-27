@@ -79,9 +79,8 @@
 
 .banner-container img {
   width: 100%;
-  height: auto; /* Faz a altura se ajustar sozinha ao tamanho real da imagem, sumindo com as faixas */
-  max-height: 450px; /* Aumentado: Agora a imagem tem mais espaço para crescer e aparecer maior */
-  object-fit: fill; /* Garante o ajuste natural e impede a distorção da imagem */
+  height: auto; /* Faz a altura se ajustar sozinha, mostrando toda a imagem para baixo */
+  object-fit: contain; /* Garante que a imagem renderize na proporção correta, SEM distorcer */
   display: block;
 }
         .info-content {
