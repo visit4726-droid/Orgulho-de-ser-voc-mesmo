@@ -28,7 +28,7 @@
             line-height: 1.6;
             min-height: 100vh;
         }
-       
+        
         nav {
             background: #fff;
             padding: 15px 20px;
@@ -68,33 +68,40 @@
             display: block;
         }
 
-        .banner-container { width: 100%; }
-        .banner-container img { width: 100%; height: auto; display: block; }
+        .banner-container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; box-sizing: border-box; }
+        .banner-container img { width: 100%; height: auto; display: block; border-radius: 15px; }
 
         .info-content {
             max-width: 1000px;
             margin: 20px auto;
             padding: 0 20px;
+            box-sizing: border-box;
         }
 
         .bandeira-full-width {
-            width: 100vw;
-            position: relative;
-            left: 50%;
-            right: 50%;
-            margin-left: -50vw;
-            margin-right: -50vw;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            width: 100%;
+            max-width: 500px;
+            margin: 30px auto;
             overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
         }
 
         .bandeira-full-width img {
             width: 100%;
             height: auto;
-            max-height: 60vh;
             display: block;
             object-fit: contain;
+        }
+
+        /* Nova estilização para as caixas de texto explicativas das bandeiras */
+        .highlight-box {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0 40px 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--bi-roxo);
         }
 
         .secao-titulo {
@@ -109,7 +116,7 @@
             color: #000000;
             margin-bottom: 10px;
         }
-       
+        
         .desc-personagens {
             max-width: 600px;
             margin: 15px auto;
@@ -119,7 +126,8 @@
         }
 
         .faixa-decorativa {
-            width: 650px;
+            width: 100%;
+            max-width: 650px;
             height: 5px;
             background: var(--gradiente-bi);
             border-radius: 50px;
@@ -127,7 +135,7 @@
         }
 
         .container-cards { max-width: 1300px; margin: 0 auto; padding: 20px; }
-       
+        
         .grid-personagens {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -165,14 +173,14 @@
         }
 
         .card-content { padding: 20px; flex-grow: 1; }
-       
+        
         .card-content h3 { color: #000000; font-size: 1.35rem; margin-top: 0; margin-bottom: 12px; text-align: left; }
 
         .card-content p { font-size: 0.95rem; margin-bottom: 12px; color: #333; text-align: left; }
 
         footer {
             background: var(--gradiente-bi);
-            padding: 60px 20px;
+            padding: 40px 20px;
             text-align: center;
             margin-top: 60px;
         }
@@ -226,19 +234,11 @@
         <img src="mes.png" alt="Banner Bi">
     </div>
 
-
     <!-- SEÇÃO O QUE É -->
     <main class="info-content" id="oquee">
         <div class="secao-titulo">
-            <h2> O que é ser Bissexual?</h2>
-            <p> São pessoas que sentem atração afetiva, romântica ou sexual por mais de um gênero, 
-                podendo ser do gênero oposto, do mesmo gênero ou não-binário. Isso não significa
-                que a atração seja dividida em partes iguais ou que funcione da mesma forma para
-                 todo mundo. Como definiu a ativista Robyn Ochs, é a possibilidade de se conectar
-                  com mais de um gênero — não necessariamente ao mesmo tempo, do mesmo jeito ou na 
-                  mesma intensidade.
-
-            </p>
+            <h2>O que é ser Bissexual?</h2>
+            <p>São pessoas que sentem atração afetiva, romântica ou sexual por mais de um gênero, podendo ser do gênero oposto, do mesmo gênero ou não-binário. Isso não significa que a atração seja dividida em partes iguais ou que funcione da mesma forma para todo mundo. Como definiu a ativista Robyn Ochs, é a possibilidade de se conectar com mais de um gênero — não necessariamente ao mesmo tempo, do mesmo jeito ou na mesma intensidade.</p>
         </div>
     </main>
 
@@ -246,7 +246,7 @@
     <main class="info-content" id="dificuldades">
         <div class="secao-titulo">
             <h2>Dificuldades</h2>
-            <p class="texto-centralizado">A bissexualidade não é um conceito moderno, já que se ouve falar sobre o assunto desde as antigas civilizações, em diversos lugares do mundo. No entanto, assim como hoje, as pessoas que assumem bis sofrem muito preconceito tanto fora quanto dentro da própria comunidade LGBTQIA+. Isso ocorre devido a estereótipos que invalidam a orientação, como exemplo de clássicas frases como "é apenas uma fase", "a pessoa está apenas confusa", "ela só está experimentando" ou que "a pessoa é infiel". A busca constante por validação gera a chamada bifobia e a invisibilidade, fazendo com que pessoas bissexuais muitas vezes não se sintam pertencentes a nenhum dos polos tradicionais.</p> 
+            <p class="texto-centralizado">A bissexualidade não é um concept moderno, já que se ouve falar sobre o assunto desde as antigas civilizações, em diversos lugares do mundo. No entanto, assim como hoje, as pessoas que assumem bis sofrem muito preconceito tanto fora quanto dentro da própria comunidade LGBTQIA+. Isso ocorre devido a estereótipos que invalidam a orientação, como exemplo de clássicas frases como "é apenas uma fase", "a pessoa está apenas confusa", "ela só está experimentando" ou que "a pessoa é infiel". A busca constante por validação gera a chamada bifobia e a invisibilidade, fazendo com que pessoas bissexuais muitas vezes não se sintam pertencentes a nenhum dos polos tradicionais.</p> 
         </div>
 
         <div class="secao-titulo">
@@ -305,7 +305,7 @@
         <div class="grid-personagens">
             <!-- LOKI -->
             <div class="card"><div class="card-inner">
-                <img src="https://www.planocritico.com/wp-content/uploads/2023/11/loki_temporada_2_ranking_episodios_plano_critico.jpg" class="char-img">
+                <img src="https://www.planocritico.com/wp-content/uploads/2023/11/loki_temporada_2_ranking_episodios_plano_critico.jpg" class="char-img" alt="Loki">
                 <div class="card-content">
                     <h3>Loki (MCU)</h3>
                     <p>A confirmação ocorreu no terceiro episódio da primeira temporada da série própria do personagem no Disney+. Ao ser questionado por Sylvie sobre possíveis interesses amorosos “E você? É um príncipe. Deve haver uma candidata a princesa ou, talvez, outro príncipe”. Ele então responde: “Um pouco dos dois. Suspeito que igual a você”.</p>
@@ -315,7 +315,7 @@
 
             <!-- GATA NEGRA -->
             <div class="card"><div class="card-inner">
-                <img src="https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:600/h:527/q:75/https://bleedingcool.com/wp-content/uploads/2021/06/Black-Cat-1-1.jpg" class="char-img">
+                <img src="https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:600/h:527/q:75/https://bleedingcool.com/wp-content/uploads/2021/06/Black-Cat-1-1.jpg" class="char-img" alt="Gata Negra">
                 <div class="card-content">
                     <h3>Felicia Hardy</h3>
                     <p>A anti-heroína mais querida do universo do Miranha deixou claro seu interesse por mulheres no quadrinho Homem-Aranha e Gata Negra: O Mal no Coração dos Homens, quando diz: “Faz tempo que não tenho um namorado… ou namorada, tanto faz…”.</p>
@@ -325,17 +325,17 @@
 
             <!-- ARLEQUINA -->
             <div class="card"><div class="card-inner">
-                <img src="https://preview.redd.it/artwork-harley-and-ivy-road-trip-art-by-me-v0-qvgix6rvxbf91.jpg?width=1080&crop=smart&auto=webp&s=450e9a7b68220ecaeb6753481f09665c446b99fd" class="char-img">
+                <img src="https://preview.redd.it/artwork-harley-and-ivy-road-trip-art-by-me-v0-qvgix6rvxbf91.jpg?width=1080&crop=smart&auto=webp&s=450e9a7b68220ecaeb6753481f09665c446b99fd" class="char-img" alt="Arlequina">
                 <div class="card-content">
                     <h3>Arlequina</h3>
-                    <p>Em 2015, a conta oficial da DC no Twitter confirmou o relacionamento entre Arlequina e Hera Venenosa, consolidando-as como um dos casais LGBTQIAP+ mais famosos da editora. Essa relação é amplamente explorada em diversos universos, com destaque para a série animada Harley Quinn (2019) que, por ser voltada ao público adulto, exige cautela com os pequenos, mas segue como recomendação essencial aos fãs.</p>
+                    <p>Em 2015, a conta oficial da DC no Twitter confirmed o relacionamento entre Arlequina e Hera Venenosa, consolidando-as como um dos casais LGBTQIAP+ mais famosos da editora. Essa relação é amplamente explorada em diversos universos, com destaque para a série animada Harley Quinn (2019) que, por ser voltada ao público adulto, exige cautela com os pequenos, mas segue como recomendação essencial aos fãs.</p>
                     <p>Além da animação, essa dinâmica foi abordada em jogos da franquia Batman: Arkham e Injustice, bem como no cinema, no filme Aves de Rapina (2020).</p>
                 </div>
             </div></div>
 
             <!-- SARA LANCE -->
             <div class="card"><div class="card-inner">
-                <img src="https://horizons-cdn.hostinger.com/f5cb18a6-9af5-498d-a6b6-9a11b52a718c/a839f8098e3b65c8c375ce26f3400034.jpg" class="char-img">
+                <img src="https://horizons-cdn.hostinger.com/f5cb18a6-9af5-498d-a6b6-9a11b52a718c/a839f8098e3b65c8c375ce26f3400034.jpg" class="char-img" alt="Sara Lance">
                 <div class="card-content">
                     <h3>Sara Lance</h3>
                     <p>Legends of Tomorrow é sem dúvida, a série mais descompromissada e divertida do Arrowverse. Um dos grandes exemplos disso é Sara Lance. Ela liderou a equipe até a série ser encerrada em sua sétima temporada, vivendo um romance com Ava Sharpe — ex-diretora do Departamento Temporal e atual membro das Lendas até o desfecho da série — desde o episódio doze da terceira temporada.</p>
@@ -344,7 +344,7 @@
 
             <!-- TIM DRAKE -->
             <div class="card"><div class="card-inner">
-                <img src="https://s2-g1.glbimg.com/3KRMRosWxslHiXroGA20to36Rc8=/0x0:681x383/600x0/smart/filters:gifv():strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2021/r/N/ZCKHs5S5KGAMS2TKJE9Q/batman-urban-legends-robin-tim-drake.jpg" class="char-img">
+                <img src="https://s2-g1.glbimg.com/3KRMRosWxslHiXroGA20to36Rc8=/0x0:681x383/600x0/smart/filters:gifv():strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2021/r/N/ZCKHs5S5KGAMS2TKJE9Q/batman-urban-legends-robin-tim-drake.jpg" class="char-img" alt="Tim Drake">
                 <div class="card-content">
                     <h3>Tim Drake</h3>
                     <p>A terceira pessoa a assumir a identidade de Robin nos quadrinhos da DC, assumiu ser bissexual na edição da série "Batman: Urban Legends" publicada em 2021.</p>
@@ -354,7 +354,7 @@
 
             <!-- SUPERGIRL -->
             <div class="card"><div class="card-inner">
-                <img src="https://i.kickstarter.com/assets/046/157/929/9218f5b2ea3436fe81b0547fa96c04a7_original.jpeg?fit=scale-down&origin=ugc&q=92&v=1724226170&width=680&sig=lBsYCNG5oXdr4Fs2cuy9YEoB1CgHoyOMAS4suN7LiEs%3D" class="char-img">
+                <img src="https://i.kickstarter.com/assets/046/157/929/9218f5b2ea3436fe81b0547fa96c04a7_original.jpeg?fit=scale-down&origin=ugc&q=92&v=1724226170&width=680&sig=lBsYCNG5oXdr4Fs2cuy9YEoB1CgHoyOMAS4suN7LiEs%3D" class="char-img" alt="Supergirl">
                 <div class="card-content">
                     <h3>Supergirl</h3>
                     <p>Fãs da série alegam que a CW cortou um beijo lésbico do último episódio do show, baseando-se em um suposto roteiro e imagens que vazaram. Embora o roteiro pareça claramente falso, as imagens do beijo entre as personagens são bastante convincentes.</p>
@@ -364,7 +364,7 @@
 
             <!-- KORRA -->
             <div class="card"><div class="card-inner">
-                <img src="https://kanto.legiaodosherois.com.br/w760-h398-gnw-cfill-q95/wp-content/uploads/2019/06/legiao_FN7sSPuOiKMC905Df4zZnr8Q1LHURVwmbp_kEIWecX.jpg.webp" class="char-img">
+                <img src="https://kanto.legiaodosherois.com.br/w760-h398-gnw-cfill-q95/wp-content/uploads/2019/06/legiao_FN7sSPuOiKMC905Df4zZnr8Q1LHURVwmbp_kEIWecX.jpg.webp" class="char-img" alt="Korra">
                 <div class="card-content">
                     <h3>Korra</h3>
                     <p>A confirmação veio através da história em quadrinhos: <strong>The Legend of Korra: Ruins of the Empire : Parte Um.</strong></p>
@@ -374,7 +374,7 @@
 
             <!-- LUZ NOCEDA -->
             <div class="card"><div class="card-inner">
-                <img src="https://static.wikia.nocookie.net/the-owl-house/images/1/19/Follies_at_the_Coven_Day_Parade_-_109.png/revision/latest/scale-to-width-down/985?cb=20220331084931" class="char-img">
+                <img src="https://static.wikia.nocookie.net/the-owl-house/images/1/19/Follies_at_the_Coven_Day_Parade_-_109.png/revision/latest/scale-to-width-down/985?cb=20220331084931" class="char-img" alt="Luz Noceda">
                 <div class="card-content">
                     <h3>Luz Noceda</h3>
                     <p>The Owl House teve sua terceira temporada reduzida a três especiais, pois os executivos da Disney Television Animation consideraram que a série não se encaixava na "marca Disney". Um dos motivos para essa decisão poderia ser a forte presença de personagens LGBTQ+.</p>
@@ -384,7 +384,7 @@
 
             <!-- CHARLIE -->
             <div class="card"><div class="card-inner">
-                <img src="https://static.wikia.nocookie.net/hazbinhotel/images/9/94/HHs2e6_-_Vaggie_comforts_Charlie.png/revision/latest/scale-to-width-down/985?cb=20251113102221" class="char-img">
+                <img src="https://static.wikia.nocookie.net/hazbinhotel/images/9/94/HHs2e6_-_Vaggie_comforts_Charlie.png/revision/latest/scale-to-width-down/985?cb=20251113102221" class="char-img" alt="Charlie">
                 <div class="card-content">
                     <h3>Charlie Morningstar</h3>
                     <p>A protagonista da série adulta Hazbin Hotel (Prime Video), possui um passado romântico antes de seu atual relacionamento com Vaggie. Durante seus anos escolares no Inferno, Charlie namorou Seviathan von Eldritch. Ele é inclusive retratado levando-a ao baile de formatura em uma das ilustrações oficiais de Vivziepop.</p>
